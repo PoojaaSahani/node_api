@@ -15,7 +15,6 @@ const OTPSchema = new mongoose.Schema({
     },
 });
 
-
 const OTPModel = mongoose.model('OTP', OTPSchema);
 
 module.exports = OTPModel;

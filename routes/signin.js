@@ -1,9 +1,9 @@
-
 const express = require('express');
 const routes = express();
 const { body } = require('express-validator');
 const userController = require('../controllers/signin');
 const optController = require('../controllers/otp');
+
 routes.use(express.json());
 
 routes.post('/',

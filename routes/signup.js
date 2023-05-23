@@ -1,7 +1,8 @@
 const express = require('express');
-const routes = express();
 const { body } = require('express-validator');
 const signupController = require('../controllers/signup');
+const routes = express();
+
 routes.use(express.json());
 
 const isAlphanumeric = (value) => {
@@ -22,6 +23,5 @@ routes.post('/signup',
         }).withMessage('Username must be alphanumeric.'),
     signupController.postSignup);
 
-
-
+    
 module.exports = routes;

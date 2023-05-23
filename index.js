@@ -5,12 +5,13 @@ dotenv.config();
 
 const mongoose = require("mongoose");
 
-const signupRoutes = require("./routes/signup");
-const signinRoutes = require("./routes/signin");
+const signUpRoutes = require("./routes/signup");
+const signInRoutes = require("./routes/signin");
 
-app.use("/", signupRoutes);
-app.use(signinRoutes);
+app.use(signUpRoutes);
+app.use(signInRoutes);
 
+// help to eshtablish connection with database
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,

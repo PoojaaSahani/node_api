@@ -1,7 +1,9 @@
-const Otp = require("../models/otp");
 const nodemailer = require("nodemailer");
-const User = require("../models/signup");
 const bcrypt = require("bcrypt");
+
+const Otp = require("../models/otp");
+const User = require("../models/signup");
+
 require("dotenv").config();
 
 postOtp = async (req, res, next) => {
@@ -24,8 +26,8 @@ postOtp = async (req, res, next) => {
         });
       }
       else {
-        res.status(200).json({
-          statusCode: 200,
+        res.status(204).json({
+          statusCode: 204,
           statusMessage: "OK",
           result: {
             success: "OTP not matched!",
